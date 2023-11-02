@@ -1,0 +1,1000 @@
+   30  cd tvp3189/comp-lab-class-2023/Week3/Setup/
+   31  ls
+   32  ls -ltr
+   33  pwd
+   34  mv charmm-gui\ \(4\).tgz ../../Week4/Setup/
+   35  cd ../../Week4/Setup/
+   36  ls
+   37  mv 2JOF_AMBER 2JOF_AMBER_messedup
+   38  tar xvf charmm-gui\ \(4\).tgz 
+   39  ls
+   40  mv charmm-gui-9637095588/ 2JOF_AMBER
+   41  cd 2JOF_AMBER
+   42  ls
+   43  cd gromacs/
+   44  ls
+   45  ls -ltr
+   46  vim ../../../Assignment.md 
+   47  cp ../../water_box/gromacs/run_setup.sbatch .
+   48  vim run_setup.sbatch 
+   49  vim ../../../Assignment.md 
+   50  vim step5_production.mdp 
+   51  vim ../../../Assignment.md 
+   52  vim step5_production.mdp 
+   53  vim run_setup.sbatch 
+   54  vim ../../../Assignment.md 
+   55  sbatch run_setup.sbatch 
+   56  squeue -u tvp3189
+   57  ls
+   58  cd tvp3189/comp-lab-class-2023/
+   59  ls
+   60  cd Week4/
+   61  ls
+   62  cd Setup/
+   63  ls
+   64  cd 2JOF_AMBER
+   65  ls
+   66  cd gromacs/
+   67  ls
+   68  ls -lre
+   69  ls -ltr
+   70  vim slurm_38713652.out 
+   71  vim run_setup.sbatch 
+   72  sbatch run_setup.sbatch 
+   73  squeue -u tvp3189
+   74  ls
+   75  cd tvp3189/comp-lab-class-2023/Week4/
+   76  ls
+   77  cd Setup/
+   78  ls
+   79  cd 2JOF_AMBER
+   80  ls
+   81  ls -tlr
+   82  cd gromacs/
+   83  ls -ltr
+   84  vim slurm_38850441.out 
+   85  cd tvp3189/comp-lab-class-2023/Week4/
+   86  ls
+   87  cd Setup/
+   88  ls
+   89  ls 2JOF_AMBER_messedup/gromacs/
+   90  vim 2JOF_AMBER_messedup/gromacs/run_setup.sbatch 
+   91  diff --help
+   92  diff 2JOF_AMBER/gromacs/run_setup.sbatch 2JOF_AMBER_messedup/gromacs/run_setup.sbatch 
+   93  diff 2JOF_AMBER/gromacs/run_setup.sbatch water_box/gromacs/run_setup.sbatch 
+   94  ls
+   95  cd 2JOF_AMBER_messedup/gromacs/
+   96  ls -ltr
+   97  cd backups/
+   98  ls
+   99  ls -ltr
+  100  cd ../..
+  101  cd ../
+  102  cd 2JOF_AMBER
+  103  ls
+  104  cd gromacs/
+  105  ls
+  106  vim run_setup.sbatch 
+  107  vim ../../../Assignment.md 
+  108  diff run_setup.sbatch ../../../Scripts/README.bash 
+  109  vim ../../../Assignment.md 
+  110  vim step5_production.mdp 
+  111  vim run_setup.sbatch 
+  112  vim slurm_38850441.out 
+  113  ls
+  114  vim slurm_38850441.out 
+  115  ls -ltr
+  116  ls -ltr ../../2JOF_AMBER_messedup/gromacs/
+  117  vim ../../2JOF_AMBER_messedup/gromacs/run_setup.sbatch 
+  118  pwd
+  119  vim README 
+  120  vim run_setup.sbatch 
+  121  sbatch run_setup.sbatch 
+  122  squeue -u tvp3189
+  123  squeue
+  124  squeue -u tvp3189
+  125  ls -ltr
+  126  squeue -u tvp3189
+  127  ls -ltr
+  128  squeue -u tvp3189
+  129  tail slurm_38856556.out 
+  130  tail -50 slurm_38856556.out 
+  131  squeue -u tvp3189
+  132  ls -ltr
+  133  squeue -u tvp3189
+  134  ls -ltr
+  135  pwd
+  136  ls -ltr
+  137  ls
+  138  cd tvp3189/comp-lab-class-2023/
+  139  ls
+  140  cd Week4/
+  141  ls
+  142  cd Setup/
+  143  ls
+  144  cd 2JOF_AMBER
+  145  cd gromacs/
+  146  ls
+  147  ls -ltr
+  148  module load gromacs/openmpi/intel/2020.4 
+  149  gmx_mpi trjcat --help
+  150  gmx_mpi --help
+  151  gmx_mpi -h
+  152  gmx_mpi help trjcat
+  153  gmx_mpi trjcat -f *.xtc -o step5_cat.xtc
+  154  ls -ltr
+  155  vim slurm_38856556.out 
+  156  vim step5_9.gro 
+  157  vim step5_9.log 
+  158  gmx_mpi help trjconv
+  159  gmx_mpi trjconv -f step5_cat.xtc -s step5_1.tpr -f step5_cat.xtc -center -pbc mol -ur compact -o step5_centered.xtc
+  160  gmx_mpi trjconv -s step5_1.tpr -f step5_cat.xtc -center -pbc mol -ur compact -o step5_centered.xtc
+  161  ls -ltr
+  162  pwd
+  163  cd tvp3189/comp-lab-class-2023/Week4/
+  164  ls
+  165  cd Setup/2JOF_AMBER/gromacs/
+  166  ls -ltr
+  167  pwd
+  168  gmx_mpi trjconv -s step5_1.gro -f step5_cat.xtc -center -pbc mol -ur compact -o step5_centered2.xtc
+  169  module load gromacs/openmpi/intel/2020.4 
+  170  gmx_mpi trjconv -s step5_1.gro -f step5_cat.xtc -center -pbc mol -ur compact -o step5_centered2.xtc
+  171  ls -ltr
+  172  gmx_mpi trjconv -s step5_1.gro -f step5_cat.xtc -center -pbc mol -ur compact -o step5_centered2.gro
+  173  ls -ltr
+  174  cd ../..
+  175  cd ..
+  176  ls
+  177  mkdir Figures
+  178  cd Figures/
+  179  ls
+  180  git status
+  181  cd ..
+  182  git add Analysis/
+  183  git add Figures/
+  184  git status
+  185  ls
+  186  cd Setup/
+  187  git status
+  188  ls
+  189  cd ..
+  190  ls
+  191  cd Analysis/
+  192  ls
+  193  git add 2JOF_analysis.ipynb 
+  194  ls
+  195  ls ../Figures/
+  196  git add ../Figures/2JOF_plots.png 
+  197  git add 2JOF_analysis.ipynb 
+  198  git status
+  199  git commit -m 'Performed analysis for 2JOF'
+  200  git status
+  201  ls
+  202  cd ../Setup/2JOF_AMBER
+  203  ls
+  204  cd gromacs/
+  205  ls -ltr
+  206  gmx_mpi trjcat -f *.xtc -o step5_cat.xtc -settime
+  207  ls -ltr
+  208  gmx_mpi trjcat -f step5_1.xtc step5_2.xtc step5_3.xtc step5_4.xtc step5_5.xtc step5_6.xtc step5_7.xtc step5_8.xtc step5_9.xtc -o step5_cat2.xtc
+  209  ls -ltr
+  210  gmx_mpi trjcat -f *.xtc -o step5_cat3.xtc -cat
+  211  gmx_mpi trjcat -f step5_?.xtc -o step5_cat3.xtc -cat
+  212  ls -ltr
+  213  gmx_mpi trjconv -s step5_1.gro -f step5_cat3.xtc -center -pbc mol -ur compact -o step5_centered3.gro
+  214  gmx_mpi trjconv -s step5_1.gro -f step5_cat3.xtc -center -pbc mol -ur compact -o step5_centered3.xtc
+  215  ls -ltr
+  216  gmx_mpi trjcat -f step5_?.xtc -o step5_cat4.xtc -cat -settime
+  217  gmx_mpi trjconv -s step5_1.gro -f step5_cat4.xtc -center -pbc mol -ur compact -o step5_centered4.xtc
+  218  gmx_mpi trjconv -s step5_1.gro -f step5_cat4.xtc -center -pbc mol -ur compact -o step5_centered4.gro
+  219  ls -ltr
+  220  ls
+  221  git status
+  222  ls
+  223  cd ../../../Analysis/
+  224  ls 
+  225  git add *
+  226  git add ../Figures/*
+  227  git commit -m 'Fixed concat of trajs for 2JOF Analysis'
+  228  ls -ltr
+  229  cd ../Setup/2JOF_AMBER
+  230  cd gromacs/
+  231  ls -ltr
+  232  vim run_setup.sbatch 
+  233  cd ../../../Analysis/
+  234  git add 2JOF_analysis.ipynb 
+  235  git commit -m "Cleaned up 2JOF Analysis notebook"
+  236  git add 2JOF_analysis.ipynb 
+  237  git commit -m "Cleaned up 2JOF Analysis notebook"
+  238  ls
+  239  cd ../Setup/
+  240  ls
+  241  cd water_box/
+  242  ls
+  243  cd gromacs/
+  244  ls
+  245  ls -ltr
+  246  gmx_mpi trjcat -f step5_?.xtc -o step5_cat.xtc -cat -settime
+  247  ls -ltr
+  248  gmx_mpi trjconv -pbc nojump -f step5_cat.xtc -s step5_1.gro -o step5_centered.xtc
+  249  ls -ltr
+  250  pwd
+  251  ls
+  252  ls -ltr
+  253  cd ../
+  254  ls
+  255  cd gromacs/
+  256  ls
+  257  vim step5_1.gro 
+  258  cd ..
+  259  ls
+  260  vim step3_pbcsetup.pdb 
+  261  cd gromacs/
+  262  ls
+  263  ls -ltr
+  264  pwd
+  265  vim step5_centered.xtc 
+  266  vim step5_1.cpt 
+  267  vim step5_1.edr 
+  268  vim step5_1.gro 
+  269  vim step5_1.log 
+  270  vim step5_1.tpr 
+  271  vim step5_1.trr 
+  272  ls
+  273  vim index.ndx 
+  274  vim mdout.mdp 
+  275  vim top
+  276  vim topol.top 
+  277  ls
+  278  cd ..
+  279  ls
+  280  cd ../Analysis/
+  281  ls
+  282  git add *
+  283  git commit -m "Added analysis for water box"
+  284  git status
+  285  git add ../Figures/water_box_plots.png 
+  286  git add water_box_analysis.ipynb 
+  287  git status
+  288  git commit -m "Analysis for Water Box"
+  289  git push
+  290  cd ..
+  291  ls
+  292  cd ..
+  293  ls
+  294  git status
+  295  ls
+  296  cd Week4/
+  297  ls
+  298  cd Setup/
+  299  ls
+  300  git add 2JOF_AMBER/gromacs/run_setup.sbatch 
+  301  git add water_box/gromacs/run_setup.sbatch 
+  302  git add 2JOF_AMBER/gromacs/step5_production.mdp 
+  303  git add water_box/gromacs/step5_production.mdp 
+  304  git commit -m "Added slurm scripts and .mdp files
+  305  "
+  306  git push
+  307  git pull
+  308  git push
+  309  ls
+  310  cd tvp3189/comp-lab-class-2023/
+  311  ls
+  312  cd Week5/
+  313  ls
+  314  cd Inputs/
+  315  ls
+  316  vim README.md 
+  317  module load gromacs/openmpi/intel/2018.3 
+  318  ls
+  319  vim adp.gro 
+  320  vim adp.top 
+  321  vim adp_T300.mdp 
+  322  vim adp.gro 
+  323  ls
+  324  pwd
+  325  cd ../../Week3/
+  326  ls
+  327  cd Input/
+  328  ls
+  329  cd ../Data/
+  330  ls
+  331  cd production/
+  332  ls
+  333  c run-38440960/
+  334  ls
+  335  cd run-38440960/
+  336  ls
+  337  ls -ltr
+  338  cd ../../..
+  339  ls
+  340  cd ../Week5/
+  341  ls
+  342  cd Inputs/
+  343  ls
+  344  gmx_mpi help mdrun
+  345  ls
+  346  gmx_mpi grommp -f adp_T300.mdp -c adp.gro -p adp.top -o adp_T300.tpr
+  347  gmx_mpi grompp -f adp_T300.mdp -c adp.gro -p adp.top -o adp_T300.tpr
+  348  ls -ltr
+  349  gmx_mpi mdrun -v -deffnm adp_T300
+  350  ls -ltr
+  351  cd ..
+  352  ls
+  353  rm -r Untitled\ Folder/
+  354  ls
+  355  mkdir Analysis
+  356  cd Analysis/
+  357  ls
+  358  ls ../Inputs/
+  359  ls
+  360  cd ..
+  361  ls
+  362  cd Inputs/
+  363  ls
+  364  mkdir adp_300_initial
+  365  ls
+  366  mv adp* adp_300_initial/
+  367  ls
+  368  mv mdout.mdp adp_300_initial/
+  369  ls
+  370  cd adp_300_initial/
+  371  ls
+  372  ls -ltr
+  373  cd ..
+  374  ls
+  375  mv adp_300_initial/ adp_T300_initial/
+  376  cd adp_T300_initial/
+  377  ls
+  378  pwd
+  379  ls
+  380  ls -ltr
+  381  cd ../../Analysis/
+  382  vim ../Input/adp_T300_initial/adp_T300.gro
+  383  cd ../Inputs/adp_T300_initial/
+  384  ls
+  385  ls -ltr
+  386  mkdir backups
+  387  cp adp.gro backups/
+  388  cp adp.top backups/
+  389  cp adp_T300.mdp backups/
+  390  ls -ltr
+  391  rm *
+  392  ls
+  393  cp backups/* .
+  394  ls
+  395  vim adp_T300.mdp 
+  396  gmx_mpi grompp -f adp_T300.mdp -c adp.gro -p adp.top -o adp_T300.tpr
+  397  ls
+  398  gmx_mpi mdrun -deffnm adp_T300
+  399  ls -ltr
+  400  gmx trjconv -s adp_T300.tpr -f adp_T300.xtc -o adp_T300_noPBC.xtc -pbc mol -center
+  401  gmx_mpi trjconv -s adp_T300.tpr -f adp_T300.xtc -o adp_T300_noPBC.xtc -pbc mol -center
+  402  ls
+  403  ls -ltr
+  404  mkdir backups2
+  405  mv * backups2
+  406  ls
+  407  mv backups2/backups/ .
+  408  ls
+  409  cp backups/* .
+  410  ls
+  411  cd tvp3189/comp-lab-class-2023/
+  412  ls
+  413  cd Week5/
+  414  ls
+  415  cd Analysis/
+  416  ls
+  417  cd ..
+  418  ls
+  419  vim Assignment.md 
+  420  ls
+  421  cd Inputs/
+  422  ls
+  423  cd adp_T300_initial/
+  424  ls
+  425  vim ../../Assignment.md 
+  426  pwd
+  427  ls
+  428  vim adp_T300.mdp 
+  429  vim ../../Assignment.md 
+  430  module load gromacs/openmpi/intel/2018.3 
+  431  history
+  432  :q
+  433  ls
+  434  cd backups2/
+  435  ls
+  436  cd tvp3189/comp-lab-class-2023/
+  437  ls
+  438  cd Week5/
+  439  ls
+  440  vim Assignment.md 
+  441  cd Inputs/
+  442  ls
+  443  cd adp_T300_initial/
+  444  ls
+  445  cd backups
+  446  ls
+  447  cd ../backups2/
+  448  ls
+  449  ls -ltr
+  450  l
+  451  sls
+  452  ls
+  453  cd tvp3189/comp-lab-class-2023/
+  454  l
+  455  ls
+  456  cd Week5/
+  457  ls
+  458  vim Assignment.md 
+  459  cd ..
+  460  ls
+  461  git pull
+  462  ls
+  463  cd Week5/
+  464  ls
+  465  cd Inputs/
+  466  ls
+  467  mkdir T300
+  468  mkdir T363
+  469  mkdir T440
+  470  ls
+  471  ls -a
+  472  cd .ssh/
+  473  ls
+  474  vim authorized_keys 
+  475  cp authorized_keys authorized_keys_backup
+  476  ls
+  477  cat ../myKey >> authorized_keys
+  478  cd ..
+  479  l
+  480  ls
+  481  vim .ssh/authorized_keys
+  482  ls
+  483  module-list
+  484  module
+  485  module list
+  486  module avail
+  487  module avail | grep openmm
+  488  module help avail
+  489  module help
+  490  module avail help
+  491  module openmm help
+  492  module avail
+  493  module whatis openmpi/intel
+  494  module whatis openmpi/intel/4.1.1 
+  495  module avail
+  496  ls
+  497  cd tvp3189/comp-lab-class-2023/
+  498  ls
+  499  cd Week3/
+  500  LS
+  501  ls
+  502  cd As
+  503  ls
+  504  vim Assignment.md 
+  505  cd ../Week4/
+  506  ls
+  507  cd Setup/
+  508  ls
+  509  cd 2JOF_AMBER
+  510  ls
+  511  cd gromacs/
+  512  ls
+  513  ls -ltr
+  514  vim README 
+  515  vim run_setup.sbatch 
+  516  mpirun help
+  517  vim run_setup.sbatch 
+  518  module load gromacs/openmpi/intel/2020.4 
+  519  mpirun help
+  520  mpirun --help
+  521  ls -ltr
+  522  vim run_setup.sbatch 
+  523  vim README 
+  524  vim run_setup.sbatch 
+  525  vim README 
+  526  vim run_setup.sbatch 
+  527  vim README 
+  528  vim run_setup.sbatch 
+  529  vim README 
+  530  vim run_setup.sbatch 
+  531  vim README 
+  532  vim run_setup.sbatch 
+  533  vim README 
+  534  vim run_setup.sbatch 
+  535  vim README 
+  536  vim run_setup.sbatch 
+  537  vim README 
+  538  vim run_setup.sbatch 
+  539  module avail
+  540  mpirun -np 3 gmx_mpi mdrun -s adp -multidir T300/ T363/ T440/ -deffnm adp_exchange3temps -replex 50
+  541  mpirun -np 3 gmx_mpi mdrun -s adp -multidir T300/ T363 T440/ -deffnm adp_exchange3temps -replex 50
+  542  mpirun -np 3 gmx_mpi mdrun -s adp -multidir T300/ T363/ T440/ -deffnm adp_exchange3temps -replex 50
+  543  vim run_parallel.sbatch
+  544  sbatch run_parallel.sbatch 
+  545  ls
+  546  rm myKey 
+  547  ls
+  548  cd git_practice/
+  549  ls
+  550  vim README.md 
+  551  vim bluestyle.css 
+  552  cd ..
+  553  ls
+  554  rm -r git_practice/
+  555  y
+  556  ls
+  557  rm -r git_practice/
+  558  ls
+  559  cd tvp3189/comp-lab-class-2023/
+  560  ls
+  561  cd Week5/
+  562  ls
+  563  vim Assignment.md 
+  564  ls
+  565  cd Inputs/
+  566  ls
+  567  cd adp_T300_initial/
+  568  ls
+  569  cd backups2/
+  570  ls
+  571  cp adp_T300.tpr ../..
+  572  cd ../..
+  573  ls
+  574  vim adp_T300.tpr 
+  575  cd adp_T300_initial/
+  576  ls
+  577  cd backups2/
+  578  ls -lr
+  579  ls -ltr
+  580  vim ../../../../Week4/Setup/2JOF_AMBER/gromacs/run_setup.sbatch 
+  581  ls
+  582  cp adp_T300.mdp ../../
+  583  cp adp.gro ../../
+  584  cp adp.top ../../
+  585  cd ../..
+  586  ls
+  587  vim adp_T300.mdp 
+  588  cp adp_T300.mdp adp_T363.mdp
+  589  cp adp_T300.mdp adp_T440.mdp
+  590  vim adp_T363.mdp 
+  591  vim adp_T440.mdp 
+  592  vim adp_T363.mdp 
+  593  vim adp_T440.mdp 
+  594  module load gromacs/openmpi/intel/2018.3 
+  595  gmx_mpi grompp -f adp_T300.mdp -o T300/adp.tpr -c adp.gro -r adp.gro -p adp.top 
+  596  gmx_mpi grompp -f adp_T363.mdp -o T363/adp.tpr -c adp.gro -r adp.gro -p adp.top 
+  597  gmx_mpi grompp -f adp_T440.mdp -o T440/adp.tpr -c adp.gro -r adp.gro -p adp.top 
+  598  ls
+  599  ls T300
+  600  ls T363
+  601  ls T440
+  602  ls
+  603  srun --pty -N 1 -n 3 -c 1 /bin/bash
+  604  srun --pty -n 3 -c 1 /bin/bash
+  605  srun --pty -N 1 -n 3 -c 1 /bin/bash
+  606  ls
+  607  vim adp_T300.mdp 
+  608  vim adp_T363.mdp 
+  609  vim adp_T440.mdp 
+  610  history > history.txt
+  611  vim history.txt 
+  612  gmx_mpi grompp -f adp_T300.mdp -o T300/adp.tpr -c adp.gro -r adp.gro -p adp.top
+  613  gmx_mpi grompp -f adp_T363.mdp -o T363/adp.tpr -c adp.gro -r adp.gro -p adp.top
+  614  gmx_mpi grompp -f adp_T440.mdp -o T440/adp.tpr -c adp.gro -r adp.gro -p adp.top
+  615  ls -ltr
+  616  vim history.txt 
+  617  srun --pty -n 3 -c 1 /bin/bash
+  618  srun --pty -N 1 -n 3 -c 1 /bin/bash
+  619  ls
+  620  ls -ltr
+  621  ls T3
+  622  ls T300
+  623  diff T300/#adp.tpr.1# T300/adp.tpr 
+  624  diff T363/#adp.tpr.1# T363/adp.tpr 
+  625  ls
+  626  srun --pty -N 1 -n 3 -c 1 /bin/bash
+  627  srun --pty -n 3 -c 1 /bin/bash
+  628  ls -ltr
+  629  ls T300
+  630  tail -30 T300/adp_exchange3temps.log 
+  631  ls T300
+  632  ls -ltr T300
+  633  tail -30 T300/adp_exchange3temps.log 
+  634  vim T300/adp_exchange3temps.gro 
+  635  vim T300/adp_exchange3temps.edr 
+  636  vim T300/adp_exchange3temps.cpt 
+  637  vim T300/adp_exchange3temps.log 
+  638  cat demux.pl
+  639  ls
+  640  cd ..
+  641  ls
+  642  ls -a
+  643  ls -a Analysis/
+  644  cd ..
+  645  ls
+  646  module unload gromacs/openmpi/intel/2018.3 
+  647  module load gromacs/openmpi/intel/2018.3 
+  648  ls -ltr
+  649  squeue -u tvp3189
+  650  cd tvp3189/comp-lab-class-2023/
+  651  ls
+  652  cd Week5/
+  653  ls
+  654  cd Inputs/
+  655  ls
+  656  ls T3
+  657  ls T300/
+  658  ls -ltr
+  659  tail mdout.mdp 
+  660  tail -50 mdout.mdp 
+  661  ls -ltr
+  662  vim mdout.mdp 
+  663  squeue -u tvp3189
+  664  scancel 39235043
+  665  squeue -u tvp3189
+  666  ls
+  667  ls -ltr
+  668  squeue -u tvp3189
+  669  scancel 39235552
+  670  squeue -u tvp3189
+  671  ls -ltr
+  672  ls T300/
+  673  ls -ltr T300
+  674  squeue -u tvp3189
+  675  ls
+  676  ls -ltr
+  677  squeue -u tvp3189
+  678  ls -ltr
+  679  ls -ltr T300
+  680  ls -ltr T363
+  681  ls -ltr T440
+  682  squeue -u tvp3189
+  683  scancel 39237015
+  684  squeue -u tvp3189
+  685  ls
+  686  cd tvp3189/comp-lab-class-2023/
+  687  ls
+  688  cd Week5
+  689  ls
+  690  cd Inputs/
+  691  ls
+  692  module load gromacs/openmpi/intel/2018.3 
+  693  ls
+  694  cd T300/
+  695  ls
+  696  vim ../../Assignment.md 
+  697  demux.pl adp_exchange3temps.log 
+  698  ls -ltr
+  699  vim ../../Assignment.md 
+  700  vim replica_index.xvg 
+  701  vim replica_temp.xvg 
+  702  pwd
+  703  cd ../..
+  704  ls
+  705  cd Analysis/
+  706  vim ../Inputs/T300/replica_index.xvg
+  707  vim ../Inputs/T300/replica_temp.xvg 
+  708  cat demux.pl
+  709  vim ../Inputs/T300/replica_temp.xvg 
+  710  diff ../Inputs/T300/replica_index.xvg ../Inputs/T300/replica_temp.xvg 
+  711  cd ..
+  712  ls
+  713  git status
+  714  git add Analysis/
+  715  git add Analysis/adp_T300_analysis.ipynb 
+  716  git add Inputs/
+  717  ls Inputs/
+  718  git add Inputs/run_parallel.sbatch 
+  719  git add Inputs/adp*
+  720  vim Inputs/run_parallel.sbatch 
+  721  git add Inputs/T*
+  722  git status
+  723  git commit -m "Ran simulations, including parallel tempering. Performed analysis."
+  724  git push
+  725  cd ../Week6/
+  726  ls
+  727  ls -a
+  728  cd Inputs/
+  729  ls
+  730  vim dialaA.pdb 
+  731  vim dialaB
+  732  vim dialaB.pdb 
+  733  diff dialaA.pdb dialaB.pdb 
+  734  ls
+  735  diff topolA.tpr topolB.tpr 
+  736  ls ..
+  737  cd ..
+  738  mkdir Analysis
+  739  cd Inputs/
+  740  source /scratch/work/courses/CHEM-GA-2671-2023fa/software/gromacs-2019.6-plumedSept2020/bin/GMXRC.bash.modules 
+  741  cd tvp3189/comp-lab-class-2023/
+  742  ls
+  743  cd Week6/
+  744  ls
+  745  cd Inputs/
+  746  ls
+  747  mkdir A
+  748  mkdir B
+  749  ls
+  750  mv topolA A/
+  751  mv topolA.tpr A/
+  752  mv topolB.tpr B/
+  753  ls
+  754  cd A/
+  755  gmx_mpi mdrun -s topolA.tpr -nsteps 10000000
+  756  source /scratch/work/courses/CHEM-GA-2671-2023fa/software/gromacs-2019.6-plumedSept2020/bin/GMXRC.bash.modules 
+  757  gmx_mpi mdrun -s topolA.tpr -nsteps 10000000
+  758  ls
+  759  ls -ltr
+  760  cd ../B/
+  761  gmx_mpi mdrun -s topolB.tpr -nsteps 10000000
+  762  ls
+  763  vim traj_comp.xtc 
+  764  vim state.cpt 
+  765  vim ener.edr 
+  766  vim confout.gro 
+  767  ls -ltr
+  768  ls ..
+  769  vim md.log 
+  770  vim ../../Assignment.md 
+  771  ls
+  772  pwd
+  773  vim state.cpt 
+  774  vim ener.edr 
+  775  vim confout.gro 
+  776  tail -50 md.log 
+  777  ls
+  778  cd ..
+  779  ls
+  780  mv dialaA.pdb A/
+  781  mv dialaB.pdb B/
+  782  ls
+  783  cd A/
+  784  ls
+  785  vim plumed.dat
+  786  vim dialaA.pdb 
+  787  vim plumed.dat
+  788  plumed driver --plumed plumed.dat --mf_xtc traj_comp.xtc 
+  789  ls
+  790  ls -ltr
+  791  vim COLVAR 
+  792  vim ../../Assignment.md 
+  793  cd ../B/
+  794  cp ../A/plumed.dat .
+  795  vim plumed.dat 
+  796  plumed driver --plumed plumed.dat --mf_xtc traj_comp.xtc 
+  797  ls -ltr
+  798  vim COLVAR 
+  799  ls
+  800  pwd
+  801  cd ..
+  802  ls
+  803  cd ../Analysis/
+  804  ls
+  805  git status
+  806  git add ../Inputs/
+  807  git status
+  808  git add Plots.ipynb 
+  809  git commit -m 'Completed PLUMED Tutorial Exercise 1 and plotted accordingly"
+  810  "'
+  811  ls
+  812  cd tvp3189/comp-lab-class-2023/
+  813  ls
+  814  cd Week6/
+  815  ls
+  816  cd Inputs/
+  817  ls
+  818  mkdir A_lugano
+  819  cd A_lugano/
+  820  ls
+  821  cp ../A/dialaA.pdb .
+  822  cp ../A/topolA.tpr .
+  823  ls
+  824  vim plumed.dat
+  825  vim ../A/plumed.dat 
+  826  vim plumed.dat
+  827  vim ../A/plumed.dat 
+  828  vim plumed.dat
+  829  vim ../A/plumed.dat 
+  830  vim plumed.dat
+  831  gmx mdrun -s topolA.tpr -nsteps 5000000 -plumed plumed.dat
+  832  source /scratch/work/courses/CHEM-GA-2671-2023fa/software/gromacs-2019.6-plumedSept2020/bin/GMXRC.bash.modules
+  833  gmx_mpi mdrun -s topolA.tpr -nsteps 5000000 -plumed plumed.dat
+  834  vim plumed.dat 
+  835  gmx_mpi mdrun -s topolA.tpr -nsteps 5000000 -plumed plumed.dat
+  836  vim plumed.dat 
+  837  gmx_mpi mdrun -s topolA.tpr -nsteps 5000000 -plumed plumed.dat
+  838  vim plumed.dat 
+  839  gmx_mpi mdrun -s topolA.tpr -nsteps 5000000 -plumed plumed.dat
+  840  ls
+  841  ls -ltr
+  842  rm #*
+  843  rm '#*'
+  844  rm '#*
+  845  '
+  846  ls
+  847  ls -ltr
+  848  vim HILLS 
+  849  vim COLVAR 
+  850  vim state.cpt 
+  851  ls -ltr
+  852  gmx_mpi mdrun -s topolA.tpr -nsteps 5000000 -plumed plumed.dat
+  853  vim plumed.dat 
+  854  gmx_mpi mdrun -s topolA.tpr -nsteps 5000000 -plumed plumed.dat
+  855  ls -ltr
+  856  rm \#*
+  857  ls -ltr
+  858  rm bck.*
+  859  ls
+  860  vim plumed.dat 
+  861  mv __FILENAME__.grid.dat guassians.grid.dat
+  862  ls
+  863  mv guassians.grid.dat gaussians.grid.dat 
+  864  vim plumed.dat 
+  865  vim gaussians.grid.dat 
+  866  ls
+  867  ls -l
+  868  pwd
+  869  vim COLVAR 
+  870  vim HILLS 
+  871  pwd
+  872  vim HILLS 
+  873  git status
+  874  git add HILLS 
+  875  git add COLVAR 
+  876  ls
+  877  ls -ltr
+  878  git add gaussians.grid.dat 
+  879  git add ../../Analysis/Lugano_plots.ipynb 
+  880  git add ../../Analysis/plumed_masterclass_plots.ipynb 
+  881  git status
+  882  git rm ../../Analysis/Plots.ipynb 
+  883  git status
+  884  pwd
+  885  ls
+  886  vim gaussians.grid.dat 
+  887  pwd
+  888  ls
+  889  vim plumed.dat 
+  890  vim gaussians.grid.dat 
+  891  vim plumed.dat 
+  892  pwd
+  893  git add ../../Analysis/Lugano_plots.ipynb 
+  894  git commit -m "Lugano Part 1"
+  895  ls
+  896  ls -ltr
+  897  ls
+  898  cd tvp3189/comp-lab-class-2023/
+  899  ls
+  900  cd Week6/
+  901  ls
+  902  pwd
+  903  ll
+  904  ls -ltr
+  905  ls -l
+  906  ll
+  907  cd tvp3189/comp-lab-class-2023/Week6/
+  908  ls
+  909  cd Inputs/
+  910  ls
+  911  cd A_lugano/
+  912  ls
+  913  source /scratch/work/courses/CHEM-GA-2671-2023fa/software/gromacs-2019.6-plumedSept2020/bin/GMXRC.bash.modules
+  914  vim HILLS 
+  915  plumed sum_hills --hills HILLS
+  916  ls -ltr
+  917  vim fes.dat 
+  918  ls
+  919  vim fes.dat 
+  920  vim HILLS 
+  921  vim gaussians.grid.dat 
+  922  cd ../..
+  923  ls
+  924  mkdir Figures
+  925  ls
+  926  ls Figures/
+  927  cd Inputs/
+  928  ls
+  929  cd A_lugano/
+  930  ls
+  931  plumed sum_hills --hills HILLS --stride 100 --mintozero
+  932  ls -ltr
+  933  ls ../../Figures/
+  934  ls
+  935  cd ..
+  936  mkdir A_2D_lugano
+  937  cp A_lugano/plumed.dat A_2D_lugano/
+  938  cp A_lugano/t* A_2D_lugano/
+  939  cd A_2D_lugano/
+  940  ls
+  941  vim plumed.dat 
+  942  gmx_mpi mdrun -s topolA.tpr -nsteps 5000000 -plumed plumed.dat
+  943  ls
+  944  rm \#traj_comp.xtc.1# 
+  945  ls
+  946  cp ../A_lugano/dialaA.pdb .
+  947  ls
+  948  gmx_mpi mdrun -s topolA.tpr -nsteps 5000000 -plumed plumed.dat
+  949  ls
+  950  vim plumed.dat 
+  951  rm \#*
+  952  ls
+  953  ll ../A_lugano/
+  954  ls
+  955  cd ..
+  956  ls
+  957  cd A
+  958  ls
+  959  ls -ltr
+  960  cd ../B/
+  961  ls
+  962  ls -ltr
+  963  cd ../A_2D_lugano/
+  964  ls
+  965  ls -ltr
+  966  vim md.log 
+  967  vim plumed.dat 
+  968  gmx_mpi mdrun -s topolA.tpr -nsteps 5000000 -plumed plumed.dat
+  969  vim plumed.dat 
+  970  gmx_mpi mdrun -s topolA.tpr -nsteps 5000000 -plumed plumed.dat
+  971  ls -ltr
+  972  ls
+  973  rm /#*
+  974  rm \#*
+  975  ls
+  976  vim COLVAR 
+  977  vim HILLS 
+  978  plumed sum_hills --hills HILLS 
+  979  ls
+  980  ls -ltr
+  981  plumed sum_hills --hills HILLS --stride 100 --mintozero
+  982  ls -ltr
+  983  pwd
+  984  vim fes.dat 
+  985  vim fes_1.dat 
+  986  cd ../../Figures/
+  987  ls
+  988  ls -ltr
+  989  rm 2D_20_ns.png 
+  990  rm 2D_50_ns.png 
+  991  rm 2D_100_ns.png 
+  992  ls -ltr
+  993  cd ../Inputs/A_2D_lugano/
+  994  ls
+  995  ls -ltr
+  996  rm bck.last.gaussians.grid.dat 
+  997  vim gaussians.grid.dat 
+  998  ls
+  999  vim gaussians.grid.dat 
+ 1000  ls
+ 1001  cd tvp3189/comp-lab-class-2023/
+ 1002  ls
+ 1003  cd Week6/
+ 1004  ls
+ 1005  cd Inputs/
+ 1006  ls
+ 1007  cd A_2D_lugano/
+ 1008  ls
+ 1009  git status
+ 1010  ls
+ 1011  cd ../..
+ 1012  ls
+ 1013  git add Figures/
+ 1014  git add Analysis/
+ 1015  git status
+ 1016  git commit -m "Finished Lugano Tutorial and ran for phi/psi. Attempted plotting for 2D"
+ 1017  cd Inputs/A_2D_lugano/
+ 1018  ls
+ 1019  vim fes.dat 
+ 1020  vim gaussians.grid.dat 
+ 1021  vim fes.dat 
+ 1022  vim gaussians.grid.dat 
+ 1023  vim Co
+ 1024  vim C
+ 1025  vim COLVAR 
+ 1026  vim plumed.dat 
+ 1027  vim COLVAR 
+ 1028  vim gaussians.grid.dat 
+ 1029  history > history.txt
